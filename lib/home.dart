@@ -15,7 +15,7 @@ class _MyHomeState extends State<MyHome> {
                     children: [
                       Text(num,
                              style: const TextStyle(
-                      fontSize: 30, fontWeight: FontWeight.bold,)),
+                      fontSize: 25, fontWeight: FontWeight.bold,)),
                       Container(
                         margin: const EdgeInsets.only(top: 10),
                         child:  Text(type),
@@ -113,7 +113,7 @@ class _MyHomeState extends State<MyHome> {
                     .createShader(bounds);
                 },
                 blendMode: BlendMode.dstIn,
-                child : Image.asset('assets/Port.png', height: 400, fit: BoxFit.contain,),),
+                child : Image.asset('assets/Port1.png', height: 570, fit: BoxFit.contain,),),
             ),
             Container(
               alignment: Alignment.center,
@@ -165,8 +165,6 @@ class _MyHomeState extends State<MyHome> {
               const SizedBox(
                             height: 10,
                           ),
-
-
               Column(
                children: [
                 Row(
@@ -179,22 +177,18 @@ class _MyHomeState extends State<MyHome> {
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: [mySpec(Icons.android, 'Andriod'), mySpec(Icons.flutter_dash, 'flutter'), mySpec(Icons.ios_share, 'ios_share')],
+                   children: [mySpec(Icons.add_a_photo_outlined, 'PhotoGraphy'), mySpec(Icons.add_to_drive_outlined, 'G Drive'), mySpec(Icons.adobe_outlined, 'Adobe')],
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                   children: [mySpec(Icons.android, 'Andriod'), mySpec(Icons.flutter_dash, 'flutter'), mySpec(Icons.ios_share, 'ios_share')],
+                   children: [mySpec(Icons.apple_rounded, 'Apple'), mySpec(Icons.window_sharp, 'Windows'), mySpec(Icons.vpn_lock_outlined, 'VPN')],
                 ),
                 const SizedBox(
                   height: 10,
                 )
-
-                
                ],
               )
             ],
