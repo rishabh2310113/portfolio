@@ -103,8 +103,17 @@ class _MyHomeState extends State<MyHome> {
         child: Stack(
           children: [
             Container(
-              //margin: EdgeInsets.only(top: 35, right: 34,),
-               child: Image.asset('assets/Port.png',height: 400,width: 1000, fit: BoxFit.contain,),
+              margin: const EdgeInsets.only(top: 35),
+               child: ShaderMask(
+                shaderCallback: (bounds){
+                  return const LinearGradient(
+                    begin: Alignment.center,
+                    end: Alignment.bottomCenter,
+                    colors: [Colors.black , Colors.transparent])
+                    .createShader(bounds);
+                },
+                blendMode: BlendMode.dstIn,
+                child : Image.asset('assets/Port.png', height: 400, fit: BoxFit.contain,),),
             ),
             Container(
               alignment: Alignment.center,
@@ -141,9 +150,9 @@ class _MyHomeState extends State<MyHome> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                    myAchiev('12', 'Projects'),
-                     myAchiev('300+', 'connections'),
-                      myAchiev('1200+', 'Rating on CC'),
+                    myAchiev('4', ' Projects'),
+                     myAchiev('450+', ' connections'),
+                      myAchiev('1200+', ' Codechef'),
                 ],
               ),
               const SizedBox(
