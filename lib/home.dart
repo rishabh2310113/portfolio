@@ -24,7 +24,6 @@ class _MyHomeState extends State<MyHome> {
                   );
   }
 
-
   mySpec(icon , tech){
     return Container(
                     width: 105,
@@ -57,6 +56,7 @@ class _MyHomeState extends State<MyHome> {
   
   @override
   Widget build(BuildContext context) {
+    final isWideScreen = MediaQuery.of(context).size.width>600;
     return Scaffold(
     backgroundColor: Colors.black,
     extendBodyBehindAppBar: true,
@@ -113,7 +113,8 @@ class _MyHomeState extends State<MyHome> {
                     .createShader(bounds);
                 },
                 blendMode: BlendMode.dstIn,
-                child : Image.asset('assets/Port1.png', height: 570, fit: BoxFit.contain,),),
+                child : Image.asset('assets/Port1.png',
+                 height: isWideScreen ? 700 : 570, fit: BoxFit.contain,),),
             ),
             Container(
               alignment: Alignment.center,
@@ -162,9 +163,7 @@ class _MyHomeState extends State<MyHome> {
                 fontSize: 20, fontWeight: FontWeight.bold,
               ),),
 
-              const SizedBox(
-                            height: 10,
-                          ),
+              const SizedBox( height: 10,),
               Column(
                children: [
                 Row(
